@@ -1,104 +1,50 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-   
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
-
-<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-
-   <title>Contact Us</title>
-   
-<style type="text/css">   
-.fieldSetContactUs{
-width: auto;
-}
-h1,h2{
-text-align:center;
-}
-.divContactUs{
-width: 98%;
-margin-left: auto;
-margin-right: auto;
-box-sizing: border-box;
-}
-.contactButtons{
-padding-left: 25px;
-padding-right: 25px;
-padding-bottom: 15px;
-padding-top: 15px;
-}
-#first{
-}
-#text{
-}
-#last{
-}
-</style>
-   
-<script type="text/javascript">
-function validateForm(form)
-{
-var x=document.forms["myForm"]["emailAddress"].value;
-var atpos=x.indexOf("@");
-var dotpos=x.lastIndexOf(".");
-if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
-  {
-  alert("Not a valid e-mail address!");
-  return false;
-  }
-}
-function checkAll(){
-
-var first=document.forms["myForm"]["firstName"].value;
-if (first==null || first==""){
- document.getElementById("first").style.borderColor = 'red';}
- else{
- document.getElementById("first").style.borderColor = 'black';
-}
-
-var last=document.forms["myForm"]["lastName"].value;
-if (last==null || last==""){
- document.getElementById("last").style.borderColor = 'red';}
- else{
- document.getElementById("last").style.borderColor = 'black';
-}
-
-var text=document.forms["myForm"]["text"].value;
-if (text==null || text==""){
- document.getElementById("text").style.borderColor = 'red';}
-else{
- document.getElementById("text").style.borderColor = 'black';
-}}
- 
-</script>
-
-</head>
-
-<body>
-<h1>Contact Us!</h1>
-<h2>Please be honest, we hope to improve our services with your feedback.</h2>
-<form name="myForm" id="myForm" onsubmit="return validateForm(this);">
-<fieldset class="fieldSetContactUs">
-<legend>Contact Info</legend><br>
-<div class="divContactUs">
-<label class="label1"><b>Name:</b></label>
-<input id="first" type="text" name="firstName"  />
-<input id="last" type="text" name="lastName" /><br /><br />
-<label class="label1"><b>Email:</b></label>
-<input type="text" name="emailAddress" />
-<br /><br />
-
-<label><b>Enter all questions, comments or concerns here:</b></label>
-<textarea id="text" name="text" onkeyup="checkText(this)" cols="90" rows="5" class="divContactUs"></textarea><br /><br />
-<button id="sumbit" onclick="checkAll()" type="submit" class="contactButtons">Submit</button/>
-</div>
-<br /></fieldset>
-
-</body>
-</form>
-
-
-
-
-
-
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bootstrap 101 Template</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+		<script src="js/jquery.min.js" /></script>
+		<script src="js/bootstrap.min.js" /></script>
+		<script src="js/jqBootstrapValidation.js"></script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span12">
+					<form id="contactForm" class="form-horizontal span8 offset2">
+						<fieldset>
+							<legend>Contact Us</legend>
+							<div class="control-group">
+								<label class="control-label" for="txtFirstName">Name:</label>
+								<div class="controls">
+									<input type="text"  id="txtFirstName" placeholder="first" required>
+									<input type="text"  id="txtLastName" placeholder="last" required>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="txtEmail">Email:</label>
+								<div class="controls">
+									<input type="email" id="txtEmail" required>
+								</div>
+							</div>
+							<div class="control-group">
+								<label class="control-label" for="txtComments">Comments:</label>
+								<div class="controls">
+									<textarea id="txtComments" rows="4" class="span9" required></textarea>
+								</div>
+							</div>
+							<div class="control-group">
+								<div class="controls">
+									<button type="submit" class="btn btn-large btn-primary">Submit</button>
+								</div>
+							</div>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
