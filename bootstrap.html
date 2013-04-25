@@ -4,39 +4,36 @@
 		<title>Bootstrap 101 Template</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- Bootstrap -->
-		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-		<link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+		<link href="css/main.css" rel="stylesheet" media="screen">
 		<script src="js/jquery.min.js" /></script>
 		<script src="js/bootstrap.min.js" /></script>
-		<script src="js/jqBootstrapValidation.js"></script>
-		<script type="text/javascript">
-		  $(function () { $("input,select,textarea").not("[type=submit]").jqBootstrapValidation(); } );
-		</script>
+		<script src="js/jquery.validate.min.js"></script>
+		<script src="js/custom.js"></script>
 	</head>
 	<body>
 		<div class="container-fluid">
 			<div class="row-fluid">
 				<div class="span12">
-					<form id="contactForm" class="form-horizontal span8 offset2">
+					<form id="contactForm" action="" class="form-horizontal span8 offset2">
 						<fieldset>
 							<legend>Contact Us</legend>
 							<div class="control-group">
 								<label class="control-label" for="txtFirstName">Name:</label>
 								<div class="controls">
-									<input type="text"  id="txtFirstName" placeholder="first" required>
-									<input type="text"  id="txtLastName" placeholder="last" required>
+									<input type="text"  id="txtFirstName" name="txtFirstName" placeholder="first" required>
+									<input type="text"  id="txtLastName" name="txtLastName" placeholder="last" required>
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="txtEmail">Email:</label>
 								<div class="controls">
-									<input type="email" id="txtEmail" required>
+									<input type="email" id="txtEmail" name="txtEmail" required>
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label" for="txtComments">Comments:</label>
 								<div class="controls">
-									<textarea id="txtComments" rows="4" class="span9" required></textarea>
+									<textarea id="txtComments" name="txtComments" class="span9" required></textarea>
 								</div>
 							</div>
 							<div class="control-group">
